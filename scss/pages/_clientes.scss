@@ -1,0 +1,24 @@
+@import '../base/colores';
+@import '../base/extend';
+
+/* Imagenes Sección Cliente */
+.img-cliente {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estrellas */
+.stars {
+    color: nth($colores, 1);
+}
+
+/* Título de Sección Clientes */
+#clientes {
+    @extend %section;
+    h2 {
+        @extend %h2;
+        span {
+            @extend %span;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import 'colores';
+@import 'variables';
+
+/* Keyframes */
+@keyframes colorBottom {
+    0% {
+        color: nth($colores, 6);
+        background-color: nth($colores, 1);
+    }
+    50% {
+        color: nth($colores, 4);
+        background-color: nth($colores, 3);
+    }
+    100% {
+        color: nth($colores, 6);
+        background-color: nth($colores, 1);
+    }
+}

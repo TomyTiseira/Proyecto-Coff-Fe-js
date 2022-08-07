@@ -1,0 +1,51 @@
+@import '../base/extend';
+@import '../base/variables';
+@import '../base/mixin';
+
+/* Ifreme de Sección Contacto */
+.iframe {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Título Sección Contacto */
+#contacto {
+    @extend %section;
+    h2 {
+        @extend %h2;
+        span {
+            @extend %span;
+        }
+    }
+}
+
+.form-container {
+    flex: 1 1 45rem;
+    margin: 1rem;
+}
+
+.inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border:$border;
+    label {
+        color:#fff;
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+    input {
+        @include pad-mar(0, 1rem);
+        @extend %input;
+        background:none;
+    }
+    textarea {
+        @extend %input;
+        @include pad-mar(0, 1rem);
+        background:none;
+        resize: none;
+        height: 7rem;
+    }
+}

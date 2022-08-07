@@ -1,0 +1,16 @@
+@import '../base/mixin';
+@import '../base/colores';
+@import '../base/extend';
+
+.nav-a {
+    color: nth($colores, 4);
+    text-decoration: none;
+    &:hover {
+        color: nth($colores, 1);
+        padding-bottom: 0.5rem;
+    }
+}
+
+.bg-button {
+    background-color: nth($colores, 1);
+}

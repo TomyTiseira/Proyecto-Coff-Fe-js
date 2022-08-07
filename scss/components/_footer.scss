@@ -1,0 +1,23 @@
+@import '../base/colores';
+@import '../base/variables';
+@import '../base/mixin';
+
+/* Logo Redes */
+.redes {
+    @include wid-hei(3rem, 3rem);
+    line-height: 3rem;
+    color: nth($colores, 4);
+    border: $border;
+    margin: 0.3rem;
+    border-radius: 50%;
+    &:hover {
+        background: nth($colores, 1);
+        color: nth($colores, 6);
+    }
+}
+
+footer {
+    span {
+        color: nth($colores, 1);
+    }
+}

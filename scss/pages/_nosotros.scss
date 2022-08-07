@@ -1,0 +1,25 @@
+@import '../base/extend';
+
+/* Container de Imagen de Sección Nosotros */
+.container-img-nosotros {
+    flex: 1 1 33.75rem;
+    img {
+        width: 100%;
+    }
+}
+
+/* Container de Contenido de Sección Nosotros */
+.container-content-nosotros {
+    flex: 1 1 33.75rem;
+}
+
+/* Título de Sección Nosotros */
+#nosotros {
+    @extend %section;
+    h2 {
+        @extend %h2;
+        span {
+            @extend %span;
+        }
+    }
+}

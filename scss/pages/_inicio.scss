@@ -1,0 +1,42 @@
+@import '../base/colores';
+@import 'base/mixin';
+
+/* Background de Inicio */
+.bg-img {
+    min-height: 100vh;
+    background: url(../../images/bg-movil.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container Inicio */
+.container-inicio {
+    max-width: 37.5rem;
+    @include pad-mar(2rem, auto);
+    p {
+        font-weight: lighter;
+        line-height: 1.8;
+        color: nth($colores, 5);
+    }
+}
+
+/* Medias Queries */
+@media (min-width: 576px) {
+    .container-inicio {
+        @include pad-mar(4rem, auto);
+    }
+}
+
+@media (min-width: 992px) {
+    .container-inicio {
+        @include pad-mar(0, 10rem);       
+    }
+    .nav-a:hover {
+        color: nth($colores, 1);
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid nth($colores, 1);
+    }
+    .bg-img {
+        background: url(../../images/bg.webp) no-repeat;
+    }
+}

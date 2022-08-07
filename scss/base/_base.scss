@@ -1,0 +1,81 @@
+@import 'mixin';
+@import 'base/colores';
+
+* {
+    @include pad-mar(0, 0);
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+/* Background del Body */
+body {
+    background: nth($colores, 3);
+}
+
+/* Background negro */
+.bgBlack {
+    background-color: nth($colores, 3);
+}
+
+/* Background negro 2 */
+.bg {
+    background-color: nth($colores, 2);
+}
+
+/* Formato Párrafo */
+.text-p {    
+    color: nth($colores, 7);
+    line-height: 1.2;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+/* Botones */
+.boton-a {
+    padding: 0.9rem 3rem;
+    color: nth($colores, 6);
+    background: nth($colores, 1);
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        letter-spacing: .15rem;
+        transform: translateY(-3px);
+        color: nth($colores, 6);
+    }
+}
+
+.boton {
+    padding: 0.9rem 3rem;
+    color: nth($colores, 6);
+    background: nth($colores, 1);
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        letter-spacing: .15rem;
+        transform: translateY(-3px);
+        animation: colorBottom 3s ease-out infinite;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 0.9375rem;
+}
+
+.box-grid {
+    padding: 3.125rem;
+    border: $border;
+    img {
+        height: 6.25rem;
+    }
+    h3 {
+        color: nth($colores, 4);
+    }
+}
+
+.disclaimer {
+    display: none;
+}

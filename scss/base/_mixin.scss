@@ -1,0 +1,9 @@
+@mixin pad-mar($pad, $mar) {
+    padding: $pad;
+    margin: $mar;
+}
+
+@mixin wid-hei($w, $h) {
+    width: $w;
+    height: $h;
+}

@@ -1,0 +1,353 @@
+@charset "UTF-8";
+/* Keyframes */
+@keyframes colorBottom {
+  0% {
+    color: #000;
+    background-color: #fffacd; }
+  50% {
+    color: #fff;
+    background-color: #010103; }
+  100% {
+    color: #000;
+    background-color: #fffacd; } }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear; }
+
+/* Background del Body */
+body {
+  background: #010103; }
+
+/* Background negro */
+.bgBlack {
+  background-color: #010103; }
+
+/* Background negro 2 */
+.bg {
+  background-color: #13131a; }
+
+/* Formato Párrafo */
+.text-p {
+  color: #ccc;
+  line-height: 1.2;
+  font-weight: lighter;
+  text-align: justify; }
+
+/* Botones */
+.boton-a {
+  padding: 0.9rem 3rem;
+  color: #000;
+  background: #fffacd;
+  cursor: pointer;
+  text-decoration: none; }
+  .boton-a:hover {
+    letter-spacing: .15rem;
+    transform: translateY(-3px);
+    color: #000; }
+
+.boton {
+  padding: 0.9rem 3rem;
+  color: #000;
+  background: #fffacd;
+  cursor: pointer;
+  text-decoration: none; }
+  .boton:hover {
+    letter-spacing: .15rem;
+    transform: translateY(-3px);
+    animation: colorBottom 3s ease-out infinite; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 0.9375rem; }
+
+.box-grid {
+  padding: 3.125rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3); }
+  .box-grid img {
+    height: 6.25rem; }
+  .box-grid h3 {
+    color: #fff; }
+
+.disclaimer {
+  display: none; }
+
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Logo Redes */
+.redes {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  margin: 0.3rem;
+  border-radius: 50%; }
+  .redes:hover {
+    background: #fffacd;
+    color: #000; }
+
+footer span {
+  color: #fffacd; }
+
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+.nav-a {
+  color: #fff;
+  text-decoration: none; }
+  .nav-a:hover {
+    color: #fffacd;
+    padding-bottom: 0.5rem; }
+
+.bg-button {
+  background-color: #fffacd; }
+
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Imagenes Sección Cliente */
+.img-cliente {
+  border-radius: 50%;
+  object-fit: cover; }
+
+/* Estrellas */
+.stars {
+  color: #fffacd; }
+
+/* Título de Sección Clientes */
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Ifreme de Sección Contacto */
+.iframe {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover; }
+
+/* Título Sección Contacto */
+.form-container {
+  flex: 1 1 45rem;
+  margin: 1rem; }
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3); }
+  .inputBox label {
+    color: #fff;
+    font-size: 1.3rem;
+    padding-left: 1rem; }
+  .inputBox input {
+    padding: 0;
+    margin: 1rem;
+    background: none; }
+  .inputBox textarea {
+    padding: 0;
+    margin: 1rem;
+    background: none;
+    resize: none;
+    height: 7rem; }
+
+/* Background de Inicio */
+.bg-img {
+  min-height: 100vh;
+  background: url(../../images/bg-movil.webp) no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+/* Container Inicio */
+.container-inicio {
+  max-width: 37.5rem;
+  padding: 2rem;
+  margin: auto; }
+  .container-inicio p {
+    font-weight: lighter;
+    line-height: 1.8;
+    color: #eee; }
+
+/* Medias Queries */
+@media (min-width: 576px) {
+  .container-inicio {
+    padding: 4rem;
+    margin: auto; } }
+
+@media (min-width: 992px) {
+  .container-inicio {
+    padding: 0;
+    margin: 10rem; }
+  .nav-a:hover {
+    color: #fffacd;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #fffacd; }
+  .bg-img {
+    background: url(../../images/bg.webp) no-repeat; } }
+
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Título de Sección Menú */
+#menu {
+  margin: 5rem 5rem 0 5rem; }
+  #menu h2 span {
+    color: #fffacd; }
+  #menu .box-grid {
+    background-color: #13131a; }
+    #menu .box-grid h3 {
+      height: 3.5rem;
+      margin-bottom: 0.5rem; }
+    #menu .box-grid div {
+      color: #fff;
+      padding: 0.5rem; }
+    #menu .box-grid img {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px; }
+
+#containerCarrito {
+  margin: 0 5rem; }
+  #containerCarrito .box-grid {
+    background-color: #13131a; }
+    #containerCarrito .box-grid h3 {
+      height: 3.5rem;
+      margin-bottom: 0.5rem; }
+    #containerCarrito .box-grid div {
+      color: #fff;
+      padding: 0.5rem; }
+    #containerCarrito .box-grid img {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px; }
+
+.box-total {
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 1rem;
+  margin: auto;
+  background-color: #13131a; }
+
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Container de Imagen de Sección Nosotros */
+.container-img-nosotros {
+  flex: 1 1 33.75rem; }
+  .container-img-nosotros img {
+    width: 100%; }
+
+/* Container de Contenido de Sección Nosotros */
+.container-content-nosotros {
+  flex: 1 1 33.75rem; }
+
+/* Título de Sección Nosotros */
+#clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
+  padding: 1.25rem 7%; }
+
+#clientes h2, #contacto h2, #menu h2, #containerCarrito h2, #nosotros h2, #promociones h2 {
+  color: #fff; }
+
+#clientes h2 span, #contacto h2 span, #nosotros h2 span, #promociones h2 span {
+  color: #fffacd; }
+
+.inputBox input, .inputBox textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: none; }
+
+/* Título de Sección Promociones */
+#promociones .box-grid div {
+  color: #fff; }
+  #promociones .box-grid div span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    color: #ccc; }
+
+#promociones .box-grid:hover {
+  background-color: #fff; }
+
+#promociones .box-grid:hover > * {
+  color: #010103; }
+
+#promociones .box-grid img {
+  border-radius: 50%; }
