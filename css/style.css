@@ -208,7 +208,7 @@ footer span {
 /* Background de Inicio */
 .bg-img {
   min-height: 100vh;
-  background: url(../../images/bg-movil.webp) no-repeat;
+  background: url(../images/bg-movil.webp) no-repeat;
   background-size: cover;
   background-position: center; }
 
