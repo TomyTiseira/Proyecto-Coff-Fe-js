@@ -237,7 +237,7 @@ footer span {
     padding-bottom: 0.5rem;
     border-bottom: 0.1rem solid #fffacd; }
   .bg-img {
-    background: url(../../images/bg.webp) no-repeat; } }
+    background: url(../images/bg.webp) no-repeat; } }
 
 #clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
   padding: 1.25rem 7%; }
