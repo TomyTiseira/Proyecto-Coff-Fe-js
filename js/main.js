@@ -22,8 +22,8 @@ btnVaciar.addEventListener('click', (e) => {
     imprimirMensaje('Se vacio el carrito exitosamente', false);
     // Vaciar el carrito
     carrito = [];
-    // Vaciar el localStorage
-    localStorage.clear();
+    // Eliminar el carrito del localStorage
+    localStorage.removeItem('carrito');
     // Eliminar del HTML
     limpiarCarrito();
     // Desabilitar el carrito
