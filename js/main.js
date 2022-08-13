@@ -81,8 +81,6 @@ const crearProducto = (infoProducto) => {
 
     // Verificar si ya existe el producto en el carrito
     const index = carrito.findIndex( produc => produc.id === id);
-    console.log(id)
-    console.log(index)
 
     // Si existe se le aumenta la cantidad del producto. Sino existe se agrega el producto
     if(index !== -1) {
