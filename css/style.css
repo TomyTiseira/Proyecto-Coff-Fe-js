@@ -238,7 +238,7 @@ footer span {
     border-bottom: 0.1rem solid #fffacd; }
   .bg-img {
     background: url(../images/bg.webp) no-repeat; } }
-    
+
 #clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
   padding: 1.25rem 7%; }
 
@@ -256,7 +256,7 @@ footer span {
 
 /* Título de Sección Menú */
 #menu {
-  margin: 5rem 5rem 0 5rem; }
+  margin-top: 5rem; }
   #menu h2 span {
     color: #fffacd; }
   #menu .box-grid {
@@ -272,20 +272,18 @@ footer span {
       height: 100px;
       width: 100px; }
 
-#containerCarrito {
-  margin: 0 5rem; }
-  #containerCarrito .box-grid {
-    background-color: #13131a; }
-    #containerCarrito .box-grid h3 {
-      height: 3.5rem;
-      margin-bottom: 0.5rem; }
-    #containerCarrito .box-grid div {
-      color: #fff;
-      padding: 0.5rem; }
-    #containerCarrito .box-grid img {
-      border-radius: 50%;
-      height: 100px;
-      width: 100px; }
+#containerCarrito .box-grid {
+  background-color: #13131a; }
+  #containerCarrito .box-grid h3 {
+    height: 3.5rem;
+    margin-bottom: 0.5rem; }
+  #containerCarrito .box-grid div {
+    color: #fff;
+    padding: 0.5rem; }
+  #containerCarrito .box-grid img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px; }
 
 .box-total {
   border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -293,6 +291,13 @@ footer span {
   padding: 1rem;
   margin: auto;
   background-color: #13131a; }
+
+/* Medias Queries */
+@media (min-width: 992px) {
+  #menu {
+    margin: 5rem 5rem 0 5rem; }
+  #containerCarrito {
+    margin: 0 5rem; } }
 
 #clientes, #contacto, #menu, #containerCarrito, #nosotros, #promociones {
   padding: 1.25rem 7%; }

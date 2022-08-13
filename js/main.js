@@ -123,7 +123,7 @@ const mostrarCarrito = () => {
             // Creación del div
             const div = document.createElement('div');
             // Estableciendole el id
-            div.dataset.id = producto.id;
+            div.dataset.id = id;
     
             // Creación del nombre del producto
             const nombreH3 = document.createElement('h3');
