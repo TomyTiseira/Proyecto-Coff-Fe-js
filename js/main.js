@@ -72,7 +72,7 @@ class Producto {
 const crearProducto = (infoProducto) => {
     const nombre = infoProducto.querySelector('h3').textContent;
     const precio = infoProducto.querySelector('div span').textContent;
-    const id = infoProducto.querySelector('a').getAttribute('data-id');
+    const id = parseInt(infoProducto.querySelector('a').getAttribute('data-id'));
     const cantidad = 1;
     const imagen = infoProducto.querySelector('img').src;
 
@@ -81,6 +81,8 @@ const crearProducto = (infoProducto) => {
 
     // Verificar si ya existe el producto en el carrito
     const index = carrito.findIndex( produc => produc.id === id);
+    console.log(id)
+    console.log(index)
 
     // Si existe se le aumenta la cantidad del producto. Sino existe se agrega el producto
     if(index !== -1) {
