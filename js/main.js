@@ -1,19 +1,23 @@
 // Variables
 const menu = document.querySelector('#menu');
+const menuGrid = document.querySelector('#menu .grid-container');
+
 // Controlar el contenido del carrito en el localStorage, en caso que no esté instanciado previamente se instancia como un array vacio
 let carrito = JSON.parse(localStorage.getItem('carrito')) ?? [];
+let productos = [];
+
 const btnVaciar = document.querySelector('.btnVaciar');
+
 const containerCarrito = document.querySelector('#containerCarrito');
 const divCarrito = document.querySelector('#carrito');
 
+const selectCategoria = document.getElementById('categoria');
+
 // Eventos
-// Agregar producto al carrito
-menu.addEventListener('click', (e) => {
-    e.preventDefault();
-    // Verificar que se haga click en el target con la clase .agregar-carrito
-    if(e.target.classList.contains('agregar-carrito')) {
-        crearProducto(e.target.parentElement);
-    }
+// Cargar el carrito en caso de tener productos en el localStorage al inciar el sitio
+document.addEventListener('DOMContentLoaded', async () => {
+    await cargarProductos();
+    mostrarCarrito();
 });
 
 // Eliminar producto
@@ -52,10 +56,8 @@ btnVaciar.addEventListener('click', (e) => {
     });
 });
 
-// Cargar el carrito en caso de tener productos en el localStorage al inciar el sitio
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarCarrito();
-});
+// Filtrar Productos en el menú
+selectCategoria.addEventListener('change', (e) => filtrarProductos(e));
 
 // Clases
 class Producto {
@@ -66,6 +68,57 @@ class Producto {
         this.id = parseInt(id);
         this.imagen = imagen;
     }
+}
+
+// Buscar los productos en el archivo .json 
+const cargarProductos = async () => {
+    const url = '../productos.json';
+    const response = await fetch(url);
+    productos = await response.json();
+    
+    mostrarProductos(productos);
+}
+
+// Mostrar los productos en el HTML
+const mostrarProductos = (productos) => {
+    productos.forEach(({ id, nombre, precio, imagen }) => {
+        // Crear un divContainer para cada producto
+        const div = document.createElement('div');
+        div.classList.add('box-grid', 'text-center');
+    
+        // Crear imagen con la src del producto
+        const img = document.createElement('img');
+        img.src = imagen;
+        div.appendChild(img);
+
+        // Crear un h3 con el nombre del producto
+        const h3 = document.createElement('h3');
+        h3.classList.add('fs-5', 'py-2', 'col');
+        h3.textContent = nombre;
+        div.appendChild(h3);
+
+        // crear un div con el precio del producto
+        const divPrecio = document.createElement('div');
+        divPrecio.classList.add('fs-6');
+        divPrecio.innerHTML = `$<span>${precio.toFixed(2)}</span>`;
+        div.appendChild(divPrecio);
+
+        // Crear un botón para agregar al carrito
+        const btnCarrito = document.createElement('a');
+        btnCarrito.classList.add('fs-6', 'd-inline-block', 'boton-a');
+        btnCarrito.dataset.id = id;
+        btnCarrito.textContent = 'Agregar al Carrito';
+        div.appendChild(btnCarrito);
+
+        // Evento para agregar producto al carrito
+        btnCarrito.onclick = (e) => {
+            e.preventDefault();
+            crearProducto(e.target.parentElement);
+        }
+        
+        // Agregar el divContainer al menú
+        menuGrid.appendChild(div);
+    });
 }
 
 // Crear producto valiendo su cantidad
@@ -115,8 +168,7 @@ const mostrarCarrito = () => {
     // Verificando si el carrito tiene productos
     if(carrito) {
         // Creando un div para cada producto del carrito
-        carrito.forEach( (producto) => {
-            const { nombre, cantidad, precio, id, imagen } = producto
+        carrito.forEach( ({ nombre, cantidad, precio, id, imagen }) => {
 
             // Creación del div
             const div = document.createElement('div');
@@ -206,6 +258,25 @@ const mostrarTotalCarrito = () => {
         containerCarrito.classList.add('d-none');
     }
 }
+
+// Filtrar productos
+const filtrarProductos = (e) => {
+    e.preventDefault();
+    const categoriaId = parseInt(e.target.value);
+
+    // Limpiar menú
+    limpiarHTML(menuGrid);
+
+    if(categoriaId === 0) {
+        mostrarProductos(productos);
+
+    } else {
+        productosFiltrados = productos.filter(({categoria}) => categoria === categoriaId);
+    
+        mostrarProductos(productosFiltrados);
+    }
+}
+
 
 // Limpiar el HTML
 const limpiarHTML = (container) => {
@@ -388,6 +459,4 @@ const actualizarCantidad = (producto) => {
 }
 
 // Calcular el precio del producto con iva incluido
-const calcularPrecioConIva = (precio, cantidad) => {
-    return precio * cantidad * 1.21;
-}
+const calcularPrecioConIva = (precio, cantidad) =>  precio * cantidad * 1.21;

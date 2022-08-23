@@ -262,7 +262,6 @@ footer span {
   #menu .box-grid {
     background-color: #13131a; }
     #menu .box-grid h3 {
-      height: 3.5rem;
       margin-bottom: 0.5rem; }
     #menu .box-grid div {
       color: #fff;
@@ -275,7 +274,6 @@ footer span {
 #containerCarrito .box-grid {
   background-color: #13131a; }
   #containerCarrito .box-grid h3 {
-    height: 3.5rem;
     margin-bottom: 0.5rem; }
   #containerCarrito .box-grid div {
     color: #fff;

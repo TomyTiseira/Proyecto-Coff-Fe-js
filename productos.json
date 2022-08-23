@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "nombre": "Skinny Vainilla Latte",
+        "precio": 399.99,
+        "imagen": "../images/promociones1.webp",
+        "categoria": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Cappuccino",
+        "precio": 450.00,
+        "imagen": "../images/promociones2.webp",
+        "categoria": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Americano",
+        "precio": 354.99,
+        "imagen": "../images/promociones3.webp",
+        "categoria": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Skinny Caramel Macchiato",
+        "precio": 435.40,
+        "imagen": "../images/promociones4.webp",
+        "categoria": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Latte Macchiato",
+        "precio": 489.98,
+        "imagen": "../images/promociones5.webp",
+        "categoria": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Submarino",
+        "precio": 500.00,
+        "imagen": "../images/menu1.webp",
+        "categoria": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Chocolate Caliente",
+        "precio": 370.50,
+        "imagen": "../images/menu2.webp",
+        "categoria": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Licuado",
+        "precio": 250.50,
+        "imagen": "../images/menu3.webp",
+        "categoria": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Jugo de Fruta",
+        "precio": 149.99,
+        "imagen": "../images/menu4.webp",
+        "categoria": 1
+    },
+    {
+        "id": 10,
+        "nombre": "Medialunas",
+        "precio": 50.00,
+        "imagen": "../images/menu5.webp",
+        "categoria": 2
+    },
+    {
+        "id": 11,
+        "nombre": "Criollos",
+        "precio": 50.00,
+        "imagen": "../images/menu6.webp",
+        "categoria": 2
+    },
+    {
+        "id": 12,
+        "nombre": "Donas",
+        "precio": 75.00,
+        "imagen": "../images/menu7.webp",
+        "categoria": 2
+    },
+    {
+        "id": 13,
+        "nombre": "Waffles",
+        "precio": 150.00,
+        "imagen": "../images/menu8.webp",
+        "categoria": 2
+    }
+]
