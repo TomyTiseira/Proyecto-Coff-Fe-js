@@ -16,6 +16,7 @@ const selectCategoria = document.getElementById('categoria');
 // Eventos
 // Cargar el carrito en caso de tener productos en el localStorage al inciar el sitio
 document.addEventListener('DOMContentLoaded', async () => {
+    // Utilizar async await para que el carrito no se muestre antes que los productos
     await cargarProductos();
     mostrarCarrito();
 });
@@ -104,14 +105,14 @@ const mostrarProductos = (productos) => {
         div.appendChild(divPrecio);
 
         // Crear un botón para agregar al carrito
-        const btnCarrito = document.createElement('a');
-        btnCarrito.classList.add('fs-6', 'd-inline-block', 'boton-a');
-        btnCarrito.dataset.id = id;
-        btnCarrito.textContent = 'Agregar al Carrito';
-        div.appendChild(btnCarrito);
+        const btnAgregarCarrito = document.createElement('a');
+        btnAgregarCarrito.classList.add('fs-6', 'd-inline-block', 'boton-a');
+        btnAgregarCarrito.dataset.id = id;
+        btnAgregarCarrito.textContent = 'Agregar al Carrito';
+        div.appendChild(btnAgregarCarrito);
 
         // Evento para agregar producto al carrito
-        btnCarrito.onclick = (e) => {
+        btnAgregarCarrito.onclick = (e) => {
             e.preventDefault();
             crearProducto(e.target.parentElement);
         }
@@ -390,6 +391,7 @@ const actualizarConInput = (e) => {
     }
 }
 
+// Actualizar el producto presionando el btn aceptar
 const actualizarConBtn = (e) => {
     const producto = e.target.parentElement.parentElement;
     const input = producto.querySelector('#inputNumber');
@@ -401,9 +403,10 @@ const actualizarConBtn = (e) => {
     } 
 
     // Mostrar alerta de cantidad no valida
-    cantidadNoValida();
+    alertacantidadNoValida();
 }
 
+// Mostrar alerta de cantidad no validad
 const alertacantidadNoValida = () => {
     Swal.fire({
         title: 'Editar producto',
@@ -415,6 +418,7 @@ const alertacantidadNoValida = () => {
     });
 }
 
+// Mostrar alerta para confirmar la actualización del producto
 const actualizarProducto = (producto) => {
     Swal.fire({
         title: 'Actualizar producto',
